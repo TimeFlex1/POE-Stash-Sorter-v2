@@ -86,7 +86,7 @@ namespace DataGetter
         {
             List<cn> a = new List<cn>();
             string temp = await DownloadData("http://poedb.tw/item.php");
-            string reg_pre = @"id=""navbar-collapse2"">\s*<ul class=""nav navbar-nav"">(.*?)</ul>\s*</div>";
+            string reg_pre = @"id=""navbar-collapse"">\s*<ul class=""nav navbar-nav"">(.*?)</ul>\s*</div>";
             Regex r = new Regex(reg_pre, RegexOptions.IgnoreCase | RegexOptions.Singleline);
             string reg_getcn = ".*?cn=(.*)";
             Regex r_getcn = new Regex(reg_getcn, RegexOptions.IgnoreCase | RegexOptions.Singleline);
